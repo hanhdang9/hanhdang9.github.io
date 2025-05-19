@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Retail Sales & Delivery Performance Analysis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 0 20px;
+            color: #333;
+        }
+
+        h1,
+        h2 {
+            color: #004466;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            font-family: Consolas, monospace;
+            border-radius: 3px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Retail Sales & Delivery Performance Analysis</h1>
+
+    <h2>1. Project background</h2>
+
+    <p style="text-align: justify;">
+        Best Choice is a U.S. retailer offering furniture, office supplies, and technology products. As part of its
+        transition to data-driven decision-making, the company initiated a project to analyze four years of historical
+        sales and delivery data. I was tasked with building a Power BI dashboard to support both the Sales Manager and
+        Operations Manager in tracking key performance metrics and uncovering actionable insights.
+    </p>
+    <p><strong>Project Goal:</strong>
+        As a Data Analyst at Best Choice, I was tasked with developing a comprehensive, interactive dashboard to analyze
+        four years of sales and operational data. This analysis was aimed at addressing the needs of two key
+        stakeholders:</p>
+    <p>Sales Manager</p>
+    <ul>
+        <li>Understand sales trends from 2014 to 2018.</li>
+        <li>Evaluate performance by customer segment, region, and sub-category.</li>
+        <li>Track key performance indicators for the latest month, including: Quantity, Revenue, Profit, Profit Margin,
+            Average Order Value (AOV)</li>
+    </ul>
+    <p>Operation Manager</p>
+    <ul>
+        <li>Assess delivery performance across shipping modes.</li>
+        <li>Measure late delivery rates.</li>
+        <li>Analyze the impact of delivery delays on product returns.</li>
+        <li>Identify operational bottlenecks that may be affecting customer satisfaction.</li>
+    </ul>
+    <h2>2. Executive Summary</h2>
+    <h3>2.1. Sales Performance</h3>
+    <img src="images/pj3_sales_overview.png" alt="Sales Dashboard">
+    <p style="text-align: justify;">
+        From 2014 to 2017, <strong>order quantity</strong> showed a steady upward trend, with slight growth between
+        2014–2015 followed by consistent increases through 2017. However, <strong>revenue and profit trends
+            diverged</strong>. Revenue dipped slightly in 2015 before rebounding strongly in 2016
+        (<strong>+33.01%</strong>) and continuing with moderate growth in 2017 (<strong>+14.77%</strong>).
+        <strong>Profit improved significantly from 2014 to 2016</strong>, but experienced a slight decline in 2017. </p>
+    <p style="text-align: justify;">
+        The <strong>profit margin</strong> was volatile across the period. It increased from <strong>10.8% in 2014 to
+            13.8% in 2016</strong>, reflecting improved profitability, but declined by <strong>14.49%</strong> in 2017,
+        settling at <strong>11.8%</strong>, indicating potential cost or pricing pressures in the most recent year.</p>
+    <h3>2.2. Delivery Performance</h3>
+    <p style="text-align: justify;">
+        The <strong>return rate</strong> increased steadily from <strong>5.5%</strong> to <strong>6.2%</strong> over the
+        four-year period. Analysis revealed significant inefficiencies in operational performance, with <strong>average
+            shipping days</strong> far exceeding acceptable standards—particularly across shipping modes other than Same
+        Day, where delivery times occasionally reached <strong>100 days or more</strong>. The <strong>late delivery
+            rate</strong> also remained persistently high, frequently surpassing <strong>30%</strong>. A notable pattern
+        emerged at the <strong>beginning of each year</strong>, where delivery delays consistently peaked during
+        <strong>January, February, and March</strong>. These insights highlight key areas for operational improvement,
+        which are further examined in the following analysis. </p>
+
+    <h2>3. Insight Deep-dive</h2>
+    <h3>3.1. Sales Performance</h3>
+    <h4>3.1.1. Sales Performance by Category</h4>
+    <img src="images/pj3_sales_by_subcate.png" alt="Subcategories Analysis">
+    <p style="text-align: justify;">
+        This scatter chart plots profit against revenue for each sub-category, with bubble size representing profit margin.
+        <p>
+            Further analysis of sales performance by sub-category revealed distinct strategic groupings based on <strong>profit</strong>, <strong>margin</strong>, and <strong>revenue</strong> characteristics:
+            </p>
+            
+            <ol>
+              <li style="text-align: justify;">
+                <strong>High-margin, high-profit, low-revenue sub-categories</strong> (e.g., <em>Copiers</em>, <em>Paper</em>, <em>Accessories</em>): These products consistently deliver strong profitability but have limited sales volume. A recommended strategy is to boost quantity and sales through targeted marketing or volume-based incentives such as bulk discounts. To support this, the company should also ensure adequate <strong>inventory availability</strong> to meet potential increases in demand without delays.
+              </li>
+              <li style="text-align: justify;">
+                <strong>High-revenue, low-margin sub-categories</strong> (e.g., <em>Machines</em>, <em>Storage</em>, <em>Chairs</em>): These segments already generate significant revenue but contribute less to overall profit due to thin margins. Increasing prices or improving cost efficiency could enhance profitability without sacrificing volume.
+              </li>
+              <li style="text-align: justify;">
+                <strong>Consistently unprofitable sub-categories</strong> (e.g., <em>Tables</em>, <em>Bookcases</em>, <em>Supplies</em>): These have shown negative profit and margins over time. It is advisable to further investigate the causes—whether pricing, cost, or demand issues—and consider phasing them out to refocus efforts on more valuable segments.
+              </li>
+              <li style="text-align: justify;">
+                <strong>High-margin, low-revenue sub-categories</strong> (e.g., <em>Labels</em>, <em>Envelopes</em>, <em>Fasteners</em>): Although margins are strong, both revenue and absolute profit are low. A similar strategy to Group 1 may be applied, but with lower priority—using light promotional efforts to scale sales where feasible.
+              </li>
+            </ol>
+            
+            <p style="text-align: justify;">
+            This segmentation approach supports more precise strategic planning, aligning pricing, marketing, inventory, and product decisions with each sub-category's contribution to the business.
+            </p>
+    <h4>3.1.2. Sales Performance by Segment</h4>
+    <img src="images/pj3_revenue_by_segment.png" alt="Segment Analysis">
+    <img src="images/pj3_profit_by_segment.png" alt="Segment Analysis">
+    <p style="text-align: justify;">
+        An analysis of sales performance by customer segment revealed distinct patterns in growth, stability, and profitability:
+        </p>
+        
+        <ul>
+          <li style="text-align: justify;">
+            <strong>Consumer</strong> remains the <strong>largest and most stable segment</strong>, consistently contributing the highest share of both revenue and profit over the four-year period. Its steady performance makes it a dependable foundation for overall business health.
+          </li>
+          
+          <li style="text-align: justify;">
+            <strong>Corporate</strong> is the <strong>second-largest segment</strong>, showing strong growth potential but with some volatility. From 2014 to 2017, revenue rose overall, with a sharp increase of <strong>65.8%</strong> between 2015 and 2016, followed by a more moderate <strong>9.17%</strong> increase in 2017. Profit followed a similar trajectory, spiking <strong>73.69%</strong> from 2015 to 2016 and <strong>46.38%</strong> from 2016 to 2017, but then dropping <strong>23.07%</strong> in 2017, accompanied by a noticeable decline in <strong>profit margin</strong>. This suggests that while sales expanded, cost management or pricing strategy may have eroded profitability in the later period.
+          </li>
+          
+          <li style="text-align: justify;">
+            <strong>Home Office</strong>, though the <strong>smallest segment in terms of volume</strong>, demonstrated the <strong>strongest profit margin</strong> and an encouraging growth trend. After a dip in 2015, revenue rebounded strongly with increases of <strong>33.02%</strong> in 2016 and <strong>56.52%</strong> in 2017. Profit also showed healthy growth during this time, rising by <strong>31.12%</strong> and <strong>27.2%</strong> respectively. This makes the Home Office segment a promising niche for high-margin growth.
+          </li>
+        </ul>
+        
+        <p style="text-align: justify;">
+        Overall, these insights suggest that while the <strong>Consumer segment</strong> provides stability, the company should monitor <strong>Corporate</strong> for margin control and continue investing in <strong>Home Office</strong> as a high-margin growth opportunity.
+        </p>
+    <h4>3.1.3. Sales Performance by Region</h4>
+    <img src="images/pj3_revenue_by_region.png" alt="Segment Analysis">
+    <img src="images/pj3_profit_by_region.png" alt="Segment Analysis">
+    <p style="text-align: justify;">
+        An analysis of sales performance by region revealed notable differences in growth, consistency, and profitability:
+        </p>
+        
+        <ul>
+          <li style="text-align: justify;">
+            <strong>East</strong> emerged as the <strong>strongest and most consistently performing region</strong>, contributing significantly to both revenue and profit growth. From 2014 to 2017, revenue increased by <strong>66.7%</strong> (from 0.12M to 0.20M), while profit nearly doubled by <strong>93.75%</strong> (from 16K to 31K). Profit margins remained high, reaching approximately <strong>15.5%</strong> in 2017. This indicates that East not only scaled effectively but also maintained strong cost discipline, making it the most strategically sound region for further investment and expansion.
+          </li>
+        
+          <li style="text-align: justify;">
+            <strong>West</strong> was a <strong>stable and reliable growth engine</strong>, demonstrating consistent increases in both revenue and profit. Revenue rose by <strong>42.9%</strong> (from 0.14M in 2014 to 0.20M in 2017), while profit increased by <strong>66.7%</strong> (from 18K to 30K). With profit margins around <strong>15%</strong> in 2017, West mirrored East in operational efficiency, albeit with slightly slower top-line growth. Its consistent performance justifies continued support and optimization to maintain profitability at scale.
+          </li>
+        
+          <li style="text-align: justify;">
+            <strong>Central</strong>, despite achieving a <strong>50%</strong> increase in revenue (from 0.10M to 0.15M), experienced a <strong>60%</strong> drop in profit — falling from 20K in 2016 to 8K in 2017. This sharp decline in profitability, despite steady revenue growth, suggests issues with cost structure or margin erosion. The region's 2017 profit margin fell to just <strong>5.3%</strong>, signaling the need for an immediate review of operational efficiency and pricing strategies.
+          </li>
+        
+          <li style="text-align: justify;">
+            <strong>South</strong> remained the <strong>weakest region overall</strong>. After a revenue dip in 2015, it recovered to 0.12M in 2017, reflecting a modest <strong>20%</strong> increase from 2014. However, profit remained low and volatile — peaking at 17K in 2016 before declining to 9K in 2017, resulting in a profit margin of just <strong>7.5%</strong>. The combination of low volume and erratic profitability highlights the need for a structural reassessment of this region, whether in terms of market fit, distribution efficiency, or cost control.
+          </li>
+        </ul>
+        
+        <p style="text-align: justify;">
+        Overall, these insights suggest that <strong>East and West</strong> should be prioritized for growth and resource allocation due to their strong margins and upward trajectories. <strong>Central</strong> requires urgent margin recovery actions despite steady revenue, while <strong>South</strong> demands a strategic turnaround to achieve financial viability.
+        </p>
+    <h4>3.1.4. Latest Month Sales Performance</h4> 
+    <img src="images/pj3_lates_month.png" alt="Segment Analysis">
+    <p style="text-align: justify;">
+        To support ongoing performance monitoring, I developed a set of KPI cards that display key sales metrics for the latest month—quantity sold, revenue, profit, profit margin, and average order value (AOV). Each card compares current figures with the same month last year, showing both the direction and percentage of change. In addition, each card includes a mini trend line to visualize how the metric has progressed from the beginning of the year.
+
+    </p> 
+    <p style="text-align: justify;">
+        The dashboard includes slicers for product category and sales representative, allowing users to filter the KPIs accordingly. For further exploration, users can interact with other charts by clicking on legends to drill down by region, subcategory, or other attributes. This interactive design helps sales managers quickly detect signs of strong or weak performance and make timely, data-driven decisions.
+    </p> 
+
+    <h3>3.2. Delivery Performance</h3>
+    <h4>3.2.1. Overview Delivery Inefficiencies</h4>
+    <img src="images/pj3_avg_shipping_days_year.png" alt="Delivery Performance Analysis">
+    <img src="images/pj3_late_ship_rate_year.png" alt="Delivery Performance Analysis">
+    <p style="text-align: justify;">
+        Line chart analysis reveals that, over the past four years, all delivery modes—except Same Day—have consistently shown poor performance in terms of average delivery days and late delivery rates, with little to no improvement. This indicates persistent inefficiencies in most shipping options.
+
+    </p>
+    <img src="images/pj3_shipping_days_distribution.png" alt="Delivery Performance Analysis">
+    <p style="text-align: justify;">
+        Additionally, the shipping days distribution chart highlights a wide variation in delivery times. While approximately 60–70% of orders were delivered within 6 days, the remaining orders took between 27 and over 200 days. This long tail of delayed deliveries signals significant inefficiencies in the logistics process and likely contributes to reduced customer satisfaction. Addressing these outliers should be a priority for improving overall service quality and reliability.
+
+    </p>
+    <h4>3.2.2. Seasonal Delivery Inefficiencies</h4>
+    <img src="images/pj3_late_ship_rate_line.png" alt="Late Ship Rate">
+    <img src="images/pj3_avg_shipping_days.png" alt="Average Shipping Days">
+    <p style="text-align: justify;">
+        An interesting pattern emerged when analyzing delivery performance: delays consistently peak during the first quarter of the year—particularly in January, February, and March. A deeper dive into these months revealed that they also tend to have lower sales volumes in terms of both quantity and revenue. This raises questions about operational inefficiencies during periods of reduced demand. The recurring nature of these delays suggests a potential issue with the current delivery setup. Further investigation is recommended to identify the root cause, such as capacity issues or seasonal constraints with the delivery partner. Exploring alternative logistics providers or renegotiating service levels could be a strategic step toward improving delivery reliability during this period.
+
+    </p>
+    <h4>3.2.3. Delivery Time, Return Rate, and Profitability</h4>
+    <img src="images/pj3_shipping_return.png" alt="Late Ship Rate">
+    <p style="text-align: justify;">
+        A scatter plot analyzing the relationship between average delivery days (X-axis), return rate (Y-axis), and profit (bubble size) across shipping modes and regions reveals several critical insights:
+      </p>
+    
+      <p style="text-align: justify;">
+        <strong>Shipping Mode Sensitivity – Same Day Delivery</strong><br>
+        For the Same Day shipping mode, a clear correlation is observed: as average delivery days increase, the return rate rises significantly. This suggests that customers who opt for Same Day delivery have high expectations for speed, and any delays may lead directly to dissatisfaction and higher return behavior. Interestingly, this trend does not hold for other shipping modes, where the relationship between delivery time and return rate appears weaker or inconsistent.
+      </p>
+    
+      <p style="text-align: justify;">
+        <strong>Regional Return Rate Disparity – The West Region</strong><br>
+        Across all shipping modes, the West region consistently shows the highest return rates compared to other regions. This may point to region-specific operational inefficiencies, logistical challenges, or customer behavior patterns that warrant further investigation. Addressing the causes in this region could have a disproportionately positive impact on overall return performance.
+      </p>
+    
+      <p style="text-align: justify;">
+        <strong>Profitability vs. Delivery Performance – Standard Class</strong><br>
+        Standard Class shipping generates the highest total profit across all regions, as indicated by the largest bubble sizes. However, this comes with a significant trade-off—average delivery time is approximately 40 days regardless of region. This is a clear area of concern: the most profitable shipping class also delivers the poorest performance in speed, potentially jeopardizing long-term customer satisfaction and loyalty. Improving the efficiency of Standard Class deliveries should be prioritized to balance profitability with service quality.
+      </p>
+    
+      <p style="text-align: justify;">
+        These insights underline the importance of tailoring delivery strategies by shipping mode and region, with a focus on optimizing Standard Class logistics and addressing the challenges in the West region.
+      </p>
+    <h2>4. Recommendations</h2>
+
+    <p style="text-align: justify;">
+        Based on the analysis of four years of retail and delivery data, the following strategic recommendations are proposed to enhance both sales growth and operational efficiency:
+    </p>
+
+    <h3>4.1 Sales Strategy Recommendations</h3>
+    <ul>
+        <li style="text-align: justify;">
+            <strong>Scale high-margin, low-volume sub-categories</strong> such as Copiers, Paper, and Accessories through targeted promotions and bundle offers. This will help increase volume while maintaining strong profitability.
+        </li>
+        <li style="text-align: justify;">
+            <strong>Re-evaluate underperforming sub-categories</strong> like Tables and Bookcases. Conduct a cost-benefit analysis to decide whether to optimize pricing or discontinue these lines.
+        </li>
+        <li style="text-align: justify;">
+            <strong>Focus on high-margin customer segments</strong>, particularly the Home Office segment, which has demonstrated consistent profit growth and strong margins.
+        </li>
+        <li style="text-align: justify;">
+            <strong>Optimize the Corporate segment</strong> by improving cost control and pricing strategy to recover declining profit margins while sustaining revenue growth.
+        </li>
+        <li style="text-align: justify;">
+            <strong>Invest in high-performing regions</strong> like East and West, while conducting a strategic review of South to uncover causes behind low profitability and market weakness.
+        </li>
+    </ul>
+
+    <h3>4.2 Delivery & Operations Recommendations</h3>
+    <ul>
+        <li style="text-align: justify;">
+            <strong>Address first-quarter delivery delays</strong> by reviewing delivery partner SLAs, capacity planning, and seasonal logistics readiness. Consider switching or renegotiating with partners to improve reliability in Q1.
+        </li>
+        <li style="text-align: justify;">
+            <strong>Investigate chronic delivery inefficiencies</strong> in Standard Class shipping. With average delivery times exceeding 40 days, this mode—despite being the most profitable—poses a long-term risk to customer satisfaction. Streamlining this delivery class should be a top priority.
+        </li>
+        <li style="text-align: justify;">
+            <strong>Target improvements in the West region</strong>, which has the highest return rates across all shipping modes. A localized operational audit may reveal root causes like warehouse delays, staffing issues, or transportation bottlenecks.
+        </li>
+        <li style="text-align: justify;">
+            <strong>Manage long-tail delivery delays</strong> (27 to 200+ days), which account for a substantial portion of customer dissatisfaction. These outliers need to be flagged and actively monitored, possibly using alerts in the dashboard.
+        </li>
+        <li style="text-align: justify;">
+            <strong>Improve Same Day delivery execution</strong>, as customer sensitivity is highest for this mode. Even small increases in delivery time significantly raise return rates, highlighting the need for tighter control and real-time monitoring.
+        </li>
+    </ul>
+
+    <p style="text-align: justify;">
+        Implementing these recommendations can improve both customer satisfaction and financial performance by aligning operational efficiency with profitable sales strategies.
+    </p>
+
+</body>
+
+</html>
