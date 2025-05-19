@@ -44,8 +44,26 @@
 <body>
 
     <h1>Retail Sales & Delivery Performance Analysis</h1>
+    <h2>Table of Contents</h2>
+<ul>
+    <li><a href="#background">1. Project Background</a></li>
+    <li><a href="#executive-summary">2. Executive Summary</a>
+        <ul>
+            <li><a href="#sales-performance-summary">2.1. Sales Performance</a></li>
+            <li><a href="#delivery-performance-summary">2.2. Delivery Performance</a></li>
+            <li><a href="#dashboard-overview">2.3. Full Dashboard Overview</a></li>
+        </ul>
+    </li>
+    <li><a href="#deep-dive">3. Insight Deep-dive</a>
+        <ul>
+            <li><a href="#sales-performance-dive">3.1. Sales Performance</a></li>
+            <li><a href="#delivery-performance-dive">3.2. Delivery Performance</a></li>
+        </ul>
+    </li>
+    <li><a href="#recommendations">4. Recommendations</a></li>
+</ul>
 
-    <h2>1. Project background</h2>
+    <h2 id="background">1. Project background</h2>
 
     <p style="text-align: justify;">
         Best Choice is a U.S. retailer offering furniture, office supplies, and technology products. As part of its
@@ -71,8 +89,8 @@
         <li>Analyze the impact of delivery delays on product returns.</li>
         <li>Identify operational bottlenecks that may be affecting customer satisfaction.</li>
     </ul>
-    <h2>2. Executive Summary</h2>
-    <h3>2.1. Sales Performance</h3>
+    <h2 id="executive-summary">2. Executive Summary</h2>
+    <h3 id="sales-performance-summary">2.1. Sales Performance</h3>
     <img src="images/pj3_sales_overview.png" alt="Sales Dashboard">
     <p style="text-align: justify;">
         From 2014 to 2017, <strong>order quantity</strong> showed a steady upward trend, with slight growth between
@@ -84,7 +102,7 @@
         The <strong>profit margin</strong> was volatile across the period. It increased from <strong>10.8% in 2014 to
             13.8% in 2016</strong>, reflecting improved profitability, but declined by <strong>14.49%</strong> in 2017,
         settling at <strong>11.8%</strong>, indicating potential cost or pricing pressures in the most recent year.</p>
-    <h3>2.2. Delivery Performance</h3>
+    <h3 id="delivery-performance-summary">2.2. Delivery Performance</h3>
     <p style="text-align: justify;">
         The <strong>return rate</strong> increased steadily from <strong>5.5%</strong> to <strong>6.2%</strong> over the
         four-year period. Analysis revealed significant inefficiencies in operational performance, with <strong>average
@@ -94,9 +112,21 @@
         emerged at the <strong>beginning of each year</strong>, where delivery delays consistently peaked during
         <strong>January, February, and March</strong>. These insights highlight key areas for operational improvement,
         which are further examined in the following analysis. </p>
+    <h3 id="dashboard-overview">2.3. Full Dashboard Overview</h3>
 
-    <h2>3. Insight Deep-dive</h2>
-    <h3>3.1. Sales Performance</h3>
+    <p style="text-align: justify;">
+        Below are the full-page views of the interactive Power BI dashboard developed for this project. The dashboard is divided into two main sections:
+        <strong>Sales Performance</strong> and <strong>Delivery Performance</strong>. These views allow users to explore historical trends, identify underperforming areas, and support data-driven decisions at both strategic and operational levels.
+    </p>
+    
+    <h4>Sales Performance Dashboard</h4>
+    <img src="images/pj3_sales_performance.png" alt="Full Sales Dashboard" style="width:100%; border:1px solid #ccc; margin:20px 0;">
+    
+    <h4>Delivery Performance Dashboard</h4>
+    <img src="images/pj3_delivery_performance.png" alt="Full Delivery Dashboard" style="width:100%; border:1px solid #ccc; margin:20px 0;">
+
+    <h2 id="deep-dive">3. Insight Deep-dive</h2>
+    <h3 id="sales-performance-dive">3.1. Sales Performance</h3>
     <h4>3.1.1. Sales Performance by Category</h4>
     <img src="images/pj3_sales_by_subcate.png" alt="Subcategories Analysis">
     <p style="text-align: justify;">
@@ -123,7 +153,7 @@
             <p style="text-align: justify;">
             This segmentation approach supports more precise strategic planning, aligning pricing, marketing, inventory, and product decisions with each sub-category's contribution to the business.
             </p>
-    <h4>3.1.2. Sales Performance by Segment</h4>
+    <h4 >3.1.2. Sales Performance by Segment</h4>
     <img src="images/pj3_revenue_by_segment.png" alt="Segment Analysis">
     <img src="images/pj3_profit_by_segment.png" alt="Segment Analysis">
     <p style="text-align: justify;">
@@ -185,7 +215,7 @@
         The dashboard includes slicers for product category and sales representative, allowing users to filter the KPIs accordingly. For further exploration, users can interact with other charts by clicking on legends to drill down by region, subcategory, or other attributes. This interactive design helps sales managers quickly detect signs of strong or weak performance and make timely, data-driven decisions.
     </p> 
 
-    <h3>3.2. Delivery Performance</h3>
+    <h3 id="delivery-performance-dive">3.2. Delivery Performance</h3>
     <h4>3.2.1. Overview Delivery Inefficiencies</h4>
     <img src="images/pj3_avg_shipping_days_year.png" alt="Delivery Performance Analysis">
     <img src="images/pj3_late_ship_rate_year.png" alt="Delivery Performance Analysis">
@@ -229,7 +259,7 @@
       <p style="text-align: justify;">
         These insights underline the importance of tailoring delivery strategies by shipping mode and region, with a focus on optimizing Standard Class logistics and addressing the challenges in the West region.
       </p>
-    <h2>4. Recommendations</h2>
+    <h2 id="recommendations">4. Recommendations</h2>
 
     <p style="text-align: justify;">
         Based on the analysis of four years of retail and delivery data, the following strategic recommendations are proposed to enhance both sales growth and operational efficiency:
